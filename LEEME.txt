@@ -1,0 +1,74 @@
+DJ THE OFFSPRIN STUDIOS - V5.9.4
+
+COMO USARLO
+1) Doble clic en INICIAR_DJ_STUDIOS_GRATIS.bat (instala solo lo necesario, ~1 minuto la primera vez).
+2) Se abre http://127.0.0.1:5000 . Desde un celular u otra PC de tu red usa la direccion que muestra la ventana negra.
+   NO hay que escribir ni configurar nada en la pagina.
+
+SEPARAR VOZ Y MELODIA / REMIX (V5.3)
+- Ahora usa una IA profesional (MDX-Net, la de Ultimate Vocal Remover) que corre DENTRO del navegador:
+  funciona en cualquier dispositivo/navegador moderno (Chrome, Edge, Firefox, Safari, celular).
+- La primera vez descarga el modelo (~67 MB) y queda guardado en el navegador; despues funciona sin Internet.
+  Si abres el programa con el .bat, la PC tambien lo guarda en la carpeta "models" y lo reparte a tus otros dispositivos.
+- Tiempo aproximado: una cancion de 3 min tarda unos 2-6 min segun el equipo (hay barra de progreso y tiempo restante).
+- La melodia se obtiene como: cancion original - voz separada (sin perdida de calidad en la mezcla).
+- Se quito el campo "Servidor (otro dispositivo)" y los avisos de servidor.
+- Ya no se instalan PyTorch ni Demucs (instalacion mucho mas rapida y con menos fallos).
+
+
+MEJORAS AGREGADAS EN ESTA ENTREGA
+- Nueva sección independiente “DJ Virtual Offsprin” con dos decks A/B, carga local de audio, ondas azul/roja y progreso de reproducción.
+- Controles por deck: reproducir/pausar, detener/CUE, velocidad, volumen y EQ de graves/medios/agudos.
+- Crossfader y limitador de salida para reducir el riesgo de clipping.
+- El botón global “Detener audio” detiene también los decks de DJ Virtual y pausa elementos de audio/video activos.
+- Contacto de Discord movido junto al botón global de detener.
+- Exportación de mezcla con MP3 320 kb/s, WAV PCM 16-bit, WAV PCM 24-bit/48 kHz y FLAC sin pérdida.
+- Casilla para activar o desactivar la masterización automática al exportar.
+- Las pantallas y funciones anteriores de Estudio DJ, Remix y Editor de audio se mantienen.
+
+NOTAS TÉCNICAS
+- Los dos decks de DJ Virtual reproducen archivos locales de forma independiente; la nueva vista no sustituye el motor de mezcla automática existente.
+- WAV 24-bit/48 kHz remuestrea a 48 kHz cuando el navegador dispone de OfflineAudioContext.
+- MP3 320 kb/s y FLAC dependen de los codificadores incluidos/cargados por el proyecto.
+
+
+DJ VIRTUAL OFFSPRIN - ACTUALIZACIÓN
+- La barra superior mantiene el orden: Estudio DJ, Editor de audio, Remix y DJ Virtual Offsprin.
+- Discord aparece junto a Detener audio; el encabezado muestra solo el nombre DJ THE OFFSPRIN.
+- Detener audio detiene los decks y las reproducciones de las otras secciones.
+- Grabación del bus MASTER en PCM; WAV PCM 24 bits / 48 kHz en el navegador.
+- MP3 320 kbps CBR requiere lameenc y FLAC PCM 24 bits requiere soundfile; ambos se codifican mediante el servidor local.
+- Ejecuta INICIAR_DJ_STUDIOS_GRATIS.bat para instalar requirements.txt y abrir la aplicación. No abras index.html directamente: los exportadores MP3/FLAC necesitan el servidor local.
+
+
+V5.9.3 - AJUSTE DE DISTRIBUCION SEGUN IMAGEN DE REFERENCIA
+- Barra superior con el nombre tipografico DJ THE OFFSPRIN, sin simbolo grafico.
+- Navegacion en el orden Estudio DJ, Editor de audio, Remix y DJ Virtual Offsprin.
+- Discord y Detener audio alineados en la misma barra.
+- DJ Virtual reorganizado en tres zonas: Deck A azul, mixer central y Deck B rojo, con panel de grabacion a la derecha y biblioteca debajo.
+- Se mantienen los IDs y controles existentes para conservar la logica de audio.
+
+
+V5.9.4 - AJUSTE DE INTERFAZ SEGUN LA CAPTURA ORIGINAL
+- DJ Virtual reorganizado visualmente: ondas generales azul/roja en la parte superior; Deck A a la izquierda; mixer al centro; Deck B a la derecha; panel de grabación al extremo derecho.
+- Controles CUE/PLAY/SYNC, volumen y pitch reubicados para acercarse a la distribución de la referencia.
+- Ecualización de ambos decks agrupada en el mixer central junto a los medidores MASTER y crossfader.
+- Biblioteca inferior con navegación lateral, buscador y filas que reflejan los archivos cargados en Deck A y Deck B.
+- Se conservaron los IDs de los controles de audio y grabación para mantener el motor existente.
+- SYNC iguala la velocidad del deck seleccionado con el otro; no realiza detección automática de BPM.
+- Diseño adaptable: en pantallas estrechas los paneles se apilan para evitar recortes.
+
+
+V6.0 - REDISEÑO DJ VIRTUAL + CORRECCIONES
+- Interfaz del DJ Virtual rehecha como la imagen de referencia neón azul/roja: ondas generales arriba, decks A/B con jog, mixer central con perillas de EQ y medidores LED, panel de grabación a la derecha y biblioteca abajo.
+- Pitch profesional por deck: fader con detent en 0, rango seleccionable ±6/±10/±16/±50 %, ajuste fino +/- 0.1 %, RESET, doble clic, rueda del ratón, BEND (mantener) y arrastre del jog. BPM detectado y SYNC por BPM.
+- Botones "Repetir últimos 5s / 10s": repiten (loop) el final de la canción que está saliendo mientras la otra entra; pulsar de nuevo lo apaga.
+- Exportación: ya no depende de que la página esté en el servidor. Busca el servidor local (127.0.0.1:5000); si no responde, codifica MP3 en el navegador (necesita internet para cargar lamejs) o guarda WAV 24 bits para no perder la grabación.
+- Biblioteca funcional: Música, Listas de reproducción, Historial, Videoclips, Karaoke (quitar voz), Sampler (8 pads), Mis archivos, Explorador de carpetas, Efectos (filtro, eco, reverb), Internet y Dispositivos (salida de audio y micrófono).
+- Rendimiento: las ondas se dibujan una sola vez en caché y solo se mueve el cursor (antes se recalculaban 4 ondas completas en cada fotograma); la grabación solo consume CPU mientras graba.
+
+V6.1 - DROPS
+- La pestaña VIDEO del mixer ahora es DROPS: 6 pads de colores para tus sonidos (intros, efectos, etc.).
+- Encima de cada pad: ＋ agrega un sonido (suena al elegirlo) y − lo elimina. Los sonidos quedan guardados en el navegador.
+- Toca el pad o las teclas 1 a 6 para dispararlos; salen por la mezcla MASTER y quedan en la grabación.
+- V6.2: barra de volumen de DROPS (0-150 %), se recuerda al reabrir.

@@ -1,0 +1,2 @@
+VERSION LOCAL GRATIS REPARADA
+Sin API ni suscripciones. Demucs separa la voz localmente; el navegador genera la nueva base; lameenc codifica MP3 CBR 320 kbps en el servidor local. La primera instalacion requiere internet para instalar dependencias y descargar el modelo Demucs.

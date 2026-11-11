@@ -1,0 +1,3 @@
+Flask>=3.0,<4
+lameenc>=1.7.0
+soundfile>=0.12.1

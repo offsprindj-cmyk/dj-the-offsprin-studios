@@ -1,0 +1,7 @@
+ARRANQUE (TODO GRATIS)
+1) Descomprime el ZIP en una carpeta normal (no lo uses desde dentro del ZIP).
+2) Si usaste una version anterior, BORRA la carpeta ".venv".
+3) Doble clic en INICIAR_DJ_STUDIOS_GRATIS.bat (instala Python si falta).
+4) Se abre http://127.0.0.1:5000 . No cierres la ventana negra.
+5) Primera separacion: necesita Internet para bajar el modelo de IA (~67 MB). Despues queda guardado.
+Si el firewall de Windows pregunta, pulsa "Permitir" (asi funciona tambien desde tu celular).
